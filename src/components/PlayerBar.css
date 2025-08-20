@@ -1,0 +1,19 @@
+.player-bar {
+  background-color: #181818;
+  padding: 15px;
+  border-top: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.player-bar button {
+  padding: 8px 16px;
+  background-color: #1db954;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.player-bar button:hover {
+  background-color: #1ed760;
+}
