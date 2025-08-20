@@ -2,15 +2,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 16px;
+  padding: 12px;
   background-color: #121212;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .navbar-left {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 6px;
 }
 
 .logo {
@@ -24,46 +24,90 @@
 }
 
 .nav-btn {
-  background: none;
+  background: #282828;
+  padding: 9px;
+  border-radius: 30px;
   border: none;
   color: white;
-  font-size: 15px;
+  font-size: 23px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 6px;
+}
+
+.nav-btn2 {
+  background: #121212;
+  border: none;
+  color: white;
+  font-size: 23px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.nav-btn2:hover {
+   color: #1db954;
 }
 
 .nav-btn:hover {
-  color: #1db954;
+   color: #1db954;
 }
 
 .navbar-center {
-  flex: 1;
-  max-width: 500px;
   display: flex;
   align-items: center;
-  background: #242424;
+  gap: 190px;
+  justify-content: space-between;
+  background: #282828;
   border-radius: 20px;
   padding: 4px 12px;
 }
 
+.icon-search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* padding: 5px; */
+}
+
+.home-search {
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+}
+
 .search-icon {
   color: #b3b3b3;
+  font-size: 22px;
   margin-right: 8px;
 }
 
 .search-input {
-  flex: 1;
-  background: none;
+  background: #282828;
   border: none;
   outline: none;
-  color: white;
   font-size: 14px;
+}
+
+.boom-box {
+  color: #b3b3b3;
+  font-size: 20px;
+}
+
+.divider {
+  width: 1px;
+  height: 20px;
+  background-color: #bdbdbd;
+  margin: 0 12px;
+}
+
+.divide-box {
+  display: flex;
+  align-items: center;
 }
 
 .navbar-right {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 16px;
 }
@@ -72,10 +116,66 @@
   background: none;
   border: none;
   font-size: 20px;
-  color: white;
+  color: #8c8c8c;
   cursor: pointer;
 }
 
 .nav-icon:hover {
   color: #1db954;
+}
+
+.nav-btn1 {
+  background: #282828;
+  padding: 5px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.nav-texts {
+  background-color: #ffffff;
+  padding: 8px 15px;
+  border-radius: 20px;
+  color: #030303;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.nav-texts1 {
+  color: #8c8c8c;
+  font-size: 15px;
+}
+
+.download-icon {
+  color: #8c8c8c;
+  font-size: 15px;
+}
+
+.down-install {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.joiner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 26px;
+  margin-right: 30px;
+}
+
+.m-icon {
+  color: #1093f7;
+  font-size: 26px;
+}
+
+.joiner1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
 }
