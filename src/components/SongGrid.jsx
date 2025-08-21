@@ -1,19 +1,15 @@
-import React from "react";
 import Sidebar from "./Sidebar";
 import SongCard from "./SongCard";
 import "./SongGrid.css";
 import songs from "../data/mockData.js";
 
-function SongGrid({ setCurrentSong, setIsPlaying, currentSong }) {
-const handleSongClick = (song) => {
-  if (setCurrentSong) setCurrentSong(song);
-  if (setIsPlaying) setIsPlaying(true);
-    const audioEl = document.querySelector("audio");
-  if (audioEl) {
-    audioEl.src = song.url;  // ensure correct src
-    audioEl.play().catch((err) => console.warn("Play blocked:", err));
-  }
-};
+function SongGrid({ onSongSelect, currentSong }) {
+
+  const handleSongClick = (song) => {
+    if (onSongSelect) {
+      onSongSelect(song);
+    }
+  };
 
   return (
     <div className="song-grid">

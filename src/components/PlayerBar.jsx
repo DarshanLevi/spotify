@@ -14,21 +14,21 @@ function PlayerBar({ currentSong, isPlaying, setIsPlaying }) {
   const audioRef = useRef(null);
   const [progress, setProgress] = useState(0);
 
-  // Auto play/pause when currentSong changes
- useEffect(() => {
+
+useEffect(() => {
   if (!audioRef.current) return;
 
-  if (currentSong && isPlaying) {
-    audioRef.current.play().catch((err) => {
-      console.warn("Autoplay prevented:", err);
-    });
-  } else {
-    audioRef.current.pause();
+  if (currentSong) {
+    audioRef.current.src = currentSong.url;
+    if (isPlaying) {
+      audioRef.current.play().catch((err) => console.warn("Play blocked:", err));
+    } else {
+      audioRef.current.pause();
+    }
   }
 }, [currentSong, isPlaying]);
 
 
-  // Update progress bar
   const handleTimeUpdate = () => {
     if (audioRef.current) {
       const percentage =
@@ -37,15 +37,14 @@ function PlayerBar({ currentSong, isPlaying, setIsPlaying }) {
     }
   };
 
-  // Play/Pause toggle
+
 const togglePlay = () => {
-  console.log("Play/Pause clicked"); // <-- test here
+  console.log("Play/Pause clicked");
   setIsPlaying((prev) => !prev);
 };
 
   return (
     <div className="player-bar">
-      {/* LEFT - Song Info */}
       <div className="song-info">
         {currentSong ? (
           <>
@@ -64,7 +63,7 @@ const togglePlay = () => {
         )}
       </div>
 
-      {/* CENTER - Controls */}
+
       <div className="player-center">
         <div className="player-controls">
           <FaRandom className="icon small" />
@@ -96,7 +95,6 @@ const togglePlay = () => {
         </div>
       </div>
 
-      {/* RIGHT - Volume */}
       <div className="player-extra">
         <FaVolumeUp className="icon small" />
         <input
@@ -110,7 +108,6 @@ const togglePlay = () => {
         />
       </div>
 
-      {/* Audio Player */}
      <audio
   ref={audioRef}
   src={currentSong?.url || undefined}

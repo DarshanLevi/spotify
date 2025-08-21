@@ -5,26 +5,23 @@ import PlayerBar from "./components/PlayerBar";
 import "./App.css";
 
 function App() {
-  const [currentSong, setCurrentSong] = useState(null); // Track selected song
-  const [isPlaying, setIsPlaying] = useState(false);   // Track play/pause
+  const [currentSong, setCurrentSong] = useState(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const handleSongSelect = (song) => {
     setCurrentSong(song);
-    setIsPlaying(true); // Start playing when a song is selected
+    setIsPlaying(true);
   };
 
   return (
     <div className="app">
-      {/* Top Navigation */}
       <Navbar />
 
-      {/* Songs Grid */}
       <SongGrid 
         onSongSelect={handleSongSelect} 
         currentSong={currentSong} 
       />
 
-      {/* Player Bar at bottom */}
       <PlayerBar
         currentSong={currentSong}
         isPlaying={isPlaying}

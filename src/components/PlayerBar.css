@@ -9,7 +9,6 @@
   font-size: 14px;
 }
 
-/* LEFT - Song Info */
 .song-info {
   display: flex;
   align-items: center;
@@ -38,7 +37,6 @@
   color: #aaa;
 }
 
-/* CENTER - Player */
 .player-center {
   display: flex;
   flex-direction: column;
@@ -96,7 +94,7 @@
   background: #1db954;
 }
 
-/* RIGHT - Extra Controls */
+
 .player-extra {
   display: flex;
   align-items: center;

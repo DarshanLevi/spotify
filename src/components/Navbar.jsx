@@ -1,4 +1,3 @@
-import React from "react";
 import "./Navbar.css";
 import { FaSpotify, FaRegArrowAltCircleDown } from "react-icons/fa";
 import { GoHomeFill } from "react-icons/go";
